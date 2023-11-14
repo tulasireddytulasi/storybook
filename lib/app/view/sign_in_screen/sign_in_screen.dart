@@ -36,7 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   alignment: Alignment.center,
                   child: const AutoSizeText(
                     "Sign In",
-                    style: TextStyles.mediumBlack126,
+                    style: TextStyles.mediumBlack1Bold26,
                     maxLines: 2,
                   ),
                 ),
@@ -45,7 +45,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   alignment: Alignment.center,
                   child: const AutoSizeText(
                     "Hi! Welcome back, you've been missed",
-                    style: TextStyles.mediumLightBlack14,
+                    style: TextStyles.mediumLightBlack12,
                     maxLines: 1,
                   ),
                 ),
