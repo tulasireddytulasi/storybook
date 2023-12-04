@@ -7,14 +7,14 @@ import 'package:storybook/app/widget/google_login_widget.dart';
 import 'package:storybook/app/widget/primary_filled_button.dart';
 import 'package:storybook/app/widget/text_form_field_widget.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -35,7 +35,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Container(
                   alignment: Alignment.center,
                   child: const AutoSizeText(
-                    "Sign In",
+                    "Create Account",
                     style: TextStyles.mediumBlack1Bold26,
                     maxLines: 2,
                   ),
@@ -44,7 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Container(
                   alignment: Alignment.center,
                   child: const AutoSizeText(
-                    "Hi! Welcome back, you've been missed",
+                    "Fill your information below or register with your social account.",
                     style: TextStyles.mediumLightBlack12,
                     maxLines: 1,
                   ),
@@ -105,7 +105,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     buttonTitle: "Sign In",
                     widgetKey: "sign_in_key",
                     isLoading: false,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => const SignUpScreen()));
+                    },
                   ),
                 ),
                 const SizedBox(height: 30),

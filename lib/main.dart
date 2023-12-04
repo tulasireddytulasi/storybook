@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:storybook/app/view/sign_in_screen/sign_in_screen.dart';
+import 'package:storybook/app/view/auth_screen/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
